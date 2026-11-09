@@ -22,8 +22,8 @@
       "duplicated_from_previous_unit": 5,
       "suspicious_round_numbers": 12
     },
-    "processing_seconds": 0.0998,
-    "records_per_second": 9019.8,
+    "processing_seconds": 0.0942,
+    "records_per_second": 9555.1,
     "overall": {
       "tp": 41,
       "fp": 41,

@@ -78,6 +78,17 @@ npm run dev                  # serves http://127.0.0.1:5173
 
 Then open <http://127.0.0.1:5173>.
 
+### Or run it as one origin (frontend + API behind a single URL)
+
+```bash
+cd frontend && npm run build && cd ..
+python scripts/serve_public.py --port 12000   # with the backend already running
+```
+
+This serves the built frontend and transparently proxies `/v1` to the backend, so the whole app is
+reachable at one URL with no CORS configuration. A live instance is verified at
+<https://work-1-cfgpkwukjwliyfgz.prod-runtime.all-hands.dev/> while this runtime is up.
+
 ```bash
 # Verify everything
 cd backend && python -m pytest tests -q     # 111 tests
