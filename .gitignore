@@ -23,7 +23,8 @@ data/evidence/*
 .openhands/
 
 # Demo render artefacts
-demo/*.mp4
+# demo/final-demo.mp4 IS a required deliverable and is committed; raw frames and
+# intermediate renders are not.
 demo/frames/
 demo/recording/
 
