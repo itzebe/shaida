@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SHAIDA">
+  <rect width="512" height="512" rx="64" fill="#101a24"/>
+  <rect x="0" y="0" width="512" height="20" fill="#c2540a"/>
+  <!-- a ledger line: three hashed rows linked into a chain -->
+  <g stroke="#f7f4ee" stroke-width="14" stroke-linecap="round" fill="none">
+    <path d="M120 176h272"/>
+    <path d="M120 256h272"/>
+    <path d="M120 336h272"/>
+  </g>
+  <g fill="#c2540a">
+    <circle cx="120" cy="176" r="18"/>
+    <circle cx="392" cy="256" r="18"/>
+    <circle cx="120" cy="336" r="18"/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Runtime application state — never committed. The database and evidence blobs are
+# generated at runtime by the seeder or by real use, and the official synthetic pack is
+# committed separately under data/official-synthetic/.
+data/shaida.sqlite3
+data/shaida.sqlite3-shm
+data/shaida.sqlite3-wal
+data/evidence/*
+!data/evidence/.gitkeep
+
+# Agent working state (contains notes about unrelated projects)
+.openhands/
+
+# Demo render artefacts
+demo/*.mp4
+demo/frames/
+demo/recording/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Runtime store created by the backend when it starts
+backend/data/*.sqlite3
+backend/data/*.sqlite3-*

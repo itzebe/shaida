@@ -1,0 +1,175 @@
+{
+  "generated_by": "evaluation/evaluate.py",
+  "dataset": {
+    "path": "data/official-synthetic",
+    "provenance": "Official Rise Networks #AI4Elections synthetic starter pack",
+    "nature": "Fully synthetic. Contains no real personal data and no real election data."
+  },
+  "rules": {
+    "records": 900,
+    "labelled_anomalies": 42,
+    "label_distribution": {
+      "none": 858,
+      "accredited_exceeds_registered": 16,
+      "sum_mismatch": 8,
+      "duplicated_from_previous_unit": 5,
+      "digit_transposition": 1,
+      "suspicious_round_numbers": 12
+    },
+    "detected_by_label": {
+      "accredited_exceeds_registered": 16,
+      "sum_mismatch": 8,
+      "duplicated_from_previous_unit": 5,
+      "suspicious_round_numbers": 12
+    },
+    "processing_seconds": 0.0942,
+    "records_per_second": 9556.1,
+    "overall": {
+      "tp": 41,
+      "fp": 41,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.9762,
+      "f1": 0.6613
+    },
+    "by_tier": {
+      "structural": {
+        "tp": 29,
+        "fp": 34,
+        "precision": 0.4603,
+        "recall": 1.0
+      },
+      "advisory": {
+        "tp": 12,
+        "fp": 7,
+        "precision": 0.6316,
+        "recall": 1.0
+      }
+    },
+    "per_rule": {
+      "R1_accredited_exceeds_registered": {
+        "label": "accredited_exceeds_registered",
+        "tier": "structural",
+        "tp": 16,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "R2_sum_mismatch": {
+        "label": "sum_mismatch",
+        "tier": "structural",
+        "tp": 8,
+        "fp": 34,
+        "fn": 0,
+        "precision": 0.1905,
+        "recall": 1.0,
+        "f1": 0.32
+      },
+      "R3_digit_transposition": {
+        "label": "digit_transposition",
+        "tier": "advisory",
+        "tp": 0,
+        "fp": 7,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "R4_suspicious_round_numbers": {
+        "label": "suspicious_round_numbers",
+        "tier": "advisory",
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "R5_duplicated_from_previous_unit": {
+        "label": "duplicated_from_previous_unit",
+        "tier": "structural",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "structural_substantiation": {
+      "findings": 63,
+      "substantiated": 63,
+      "rate": 1.0,
+      "definition": "A structural finding is 'substantiated' when the contradiction it states actually holds in the record's own numbers. This is independent of the organisers' single-primary-label scheme, which is why it is reported alongside the label-matched precision rather than instead of it."
+    },
+    "records_flagged": 49,
+    "flag_rate": 0.0544,
+    "clean_records": 858,
+    "clean_records_flagged": 7,
+    "clean_false_alarm_rate": 0.0082
+  },
+  "severity_assist": {
+    "available": true,
+    "train_size": 300,
+    "test_size": 100,
+    "answered": 100,
+    "abstained": 0,
+    "exact_accuracy": 0.4,
+    "within_one_accuracy": 0.88,
+    "baseline_majority_class": 3,
+    "baseline_exact_accuracy": 0.25,
+    "baseline_within_one_accuracy": 0.71,
+    "confusion": {
+      "2->3": 5,
+      "3->4": 12,
+      "0->0": 9,
+      "3->1": 6,
+      "4->4": 14,
+      "4->3": 6,
+      "3->3": 7,
+      "2->1": 13,
+      "2->4": 4,
+      "1->0": 7,
+      "2->2": 4,
+      "1->1": 6,
+      "1->2": 5,
+      "0->2": 2
+    },
+    "note": "Reported severity is the reporter's own framing. A modest score is expected and is not a defect: the signal is genuinely weak. The component abstains rather than guessing, and it is used only to order a queue, never to make a finding."
+  },
+  "claim_matching": {
+    "archive_size": 300,
+    "evaluated": 75,
+    "top1_accuracy": 0.7067,
+    "top3_accuracy": 0.8667,
+    "abstention_rate": 0.0,
+    "method": "deterministic paraphrase perturbation (rotation + character drop)"
+  },
+  "clustering": {
+    "reports": 400,
+    "clusters": 17,
+    "largest_cluster": 56,
+    "reports_in_multi_member_clusters": 400,
+    "queue_items_saved": 383,
+    "reduction_ratio": 0.9575
+  },
+  "triage_ordering": {
+    "reports": 400,
+    "top_decile_mean_severity": 4.0,
+    "rest_mean_severity": 1.925,
+    "mean_severity": 2.132,
+    "lift": 2.075,
+    "note": "Severity is only one of six published signals, so the ordering is not expected to reproduce severity exactly. The lift shows the ranking does surface more serious reports first."
+  },
+  "rejected_heuristics": {
+    "single_digit_difference": {
+      "records": 900,
+      "records_flagged": 444,
+      "fire_rate": 0.4933,
+      "status": "rejected",
+      "reason": "over-fired on 49% of records against the official pack; rejected"
+    }
+  }
+}
