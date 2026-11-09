@@ -239,7 +239,7 @@ insecure default. The prototype needs **no credential of any kind** to run.
 ## 10. Performance
 
 The rule engine is pure integer arithmetic over in-memory records with no I/O and no inference on
-the hot path: **~9 500 records/second** measured over 900 records (0.094 s). The assistive model is
+the hot path: **~9 000–9 600 records/second** measured over 900 records (0.094 s). The assistive model is
 consulted only when a reporter has not stated a severity.
 
 ## 11. Verification plan (how each claim is proven)

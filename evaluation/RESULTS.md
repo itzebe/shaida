@@ -15,7 +15,7 @@ deterministic single-threaded execution.
 | Records flagged, out of 900 | 49 (**5.4 %**) |
 | Clean records wrongly flagged | 7 / 858 (**0.8 %**) |
 | Structural findings that are genuinely true | **63 / 63 = 100 %** |
-| Throughput | ~9 500 records/second |
+| Throughput | ~9 000–9 600 records/second |
 
 Read together: the engine catches nearly every labelled anomaly, flags a small and reviewable
 share of the corpus, and almost never flags a clean record. That combination — not recall alone —
@@ -169,7 +169,7 @@ ordering is doing real work.
 |---|---|
 | Records processed | 900 |
 | Wall time | 0.094 s |
-| Throughput | ~9 556 records/second |
+| Throughput | ~9 000–9 600 records/second (varies with machine load) |
 
 The rule engine is pure integer arithmetic over in-memory records with no I/O and no model
 inference on the hot path, which is why it is fast. The assistive model is only consulted when a
